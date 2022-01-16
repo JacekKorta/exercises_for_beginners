@@ -1,0 +1,9 @@
+[flake8]
+max-line-length = 100
+max-complexity = 12
+ignore=E501 config/settings.py
+exclude =
+    migrations
+    manage.py
+    settings.py
+    config/runner.py
