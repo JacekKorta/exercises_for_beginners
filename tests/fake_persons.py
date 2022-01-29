@@ -13,13 +13,9 @@ class Person:
         self.phone_number = fake.phone_number()
         self.email = None  # todo
 
-    def __str__(self):
-        return (
-            f"{self.first_name} {self.last_name}\n"
-            f"{self.street_address}\n"
-            f"{self.postcode} {self.city}\n"
-            f"tel: {self.phone_number}\n"
-        )
+    @property
+    def full_address(self):
+        return f"{self.street_address}; {self.postcode} {self.city}"
 
     def form_repr(self):
         form_data = (
@@ -38,6 +34,14 @@ class Person:
             f"Phone Number: {self.phone_number}"
         )
         return output
+
+        def __str__(self):
+            return (
+                f"{self.first_name} {self.last_name}\n"
+                f"{self.street_address}\n"
+                f"{self.postcode} {self.city}\n"
+                f"tel: {self.phone_number}\n"
+            )
 
 
 if __name__ == "__main__":

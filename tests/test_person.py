@@ -1,4 +1,4 @@
-from tests.fake_factories import Person
+from tests.fake_persons import Person
 
 from strings.person import persons_data_converter
 
